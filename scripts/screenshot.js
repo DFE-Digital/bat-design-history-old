@@ -13,9 +13,13 @@
   ]
 */
 const paths = [
-  { title: 'Design history index', path: '/'}
+  { title: 'Service overview', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/rMeZ'},
+  { title: 'Engagement tracking', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/CAxa'},
+  { title: 'Success measures', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/gNQk'},
+  { title: 'Location searches', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/LwdZ'},
+  { title: 'Subject searches', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/exdZ'}
 ];
-const domain = 'http://localhost:3000';
+const domain = 'https://datastudio.google.com';
 
 // Dependencies
 const webshot = require('webshot');
@@ -81,13 +85,14 @@ function takeScreenshots() {
       'ignore-ssl-errors': 'true'
     },
     windowSize: {
-      width: 1200,
-      height: 800
+      width: 1600,
+      height: 1096
     },
     shotSize: {
       width: 'window',
       height: 'all'
-    }
+    },
+    renderDelay: 20000
   }
 
   paths.forEach(function(item, index) {

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% set title = 'Performance test' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ designHistory.breadcrumbs(breadcrumbItems()) }}{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">{{ title }}</h1>
+
+  {% set contents = [
+    { text: 'Service overview', id: 'service-overview' },
+    { text: 'Engagement tracking', id: 'engagement-tracking' },
+    { text: 'Success measures', id: 'success-measures' },
+    { text: 'Location searches', id: 'location-searches' },
+    { text: 'Subject searches', id: 'subject-searches' }
+  ] %}
+  {{ designHistory.screenshotContents(contents) }}
+
+  {% set overviewContent %}
+    some words
+
+    in stuff
+  {% endset %}
+
+  {{ designHistory.screenshot('Service overview', 'service-overview', '/public/images/performance-test/thumbnails/service-overview.png', '/public/images/performance-test/service-overview.png', markdown(overviewContent)) }}
+
+  {{ designHistory.screenshot('Engagement tracking', 'engagement-tracking', '/public/images/performance-test/thumbnails/engagement-tracking.png', '/public/images/performance-test/engagement-tracking.png', '') }}
+
+  {{ designHistory.screenshot('Success measures', 'success-measures', '/public/images/performance-test/thumbnails/success-measures.png', '/public/images/performance-test/success-measures.png', '') }}
+
+  {{ designHistory.screenshot('Location searches', 'location-searches', '/public/images/performance-test/thumbnails/location-searches.png', '/public/images/performance-test/location-searches.png', '') }}
+
+  {{ designHistory.screenshot('Subject searches', 'subject-searches', '/public/images/performance-test/thumbnails/subject-searches.png', '/public/images/performance-test/subject-searches.png', '') }}
+
+{% endblock %}

@@ -14,11 +14,8 @@
 */
 const paths = [
   { title: 'Service overview', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/rMeZ'},
-  { title: 'Engagement tracking', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/CAxa'},
-  { title: 'Success measures', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/gNQk'},
-  { title: 'Location searches', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/LwdZ'},
-  { title: 'Subject searches', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/exdZ'}
-];
+  { title: 'Success measures', path: '/reporting/1M4DgevUBtTVwS09bEpWbkhPxxFqNOBjt/page/gNQk'}
+  ];
 const domain = 'https://datastudio.google.com';
 
 // Dependencies

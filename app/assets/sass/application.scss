@@ -4,6 +4,9 @@ $govuk-global-styles: true;
 // Not in design system:
 $button-colour: #00823b;
 
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
 
@@ -91,14 +94,14 @@ $button-colour: #00823b;
 
 .phase-tag-no-content {
   background: govuk-colour("white");
-  color: govuk-colour("grey-1");
-  border: 2px solid lighten(govuk-colour("grey-1"), 10%);
+  color: govuk-colour("mid-grey");
+  border: 2px solid lighten(govuk-colour("dark-grey"), 10%);
   margin-top: -1px;
   margin-bottom: -1px;
 }
 
 .phase-tag-not-running {
-  background: govuk-colour("grey-3");
+  background: govuk-colour("light-grey");
   color: govuk-colour("black");
   margin-top: -1px;
   margin-bottom: -1px;
@@ -113,7 +116,7 @@ $button-colour: #00823b;
 }
 
 .empty {
-  color: govuk-colour("grey-1");
+  color: govuk-colour("dark-grey");
 }
 
 .progress-bar-container {

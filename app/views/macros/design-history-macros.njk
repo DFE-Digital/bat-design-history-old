@@ -10,7 +10,7 @@
 {% endmacro %}
 
 {% macro breadcrumbs(items = [ { href: "/", text: "Design history" } ]) %}
-  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
   <div class="design-history-dont-print">
     {{ govukBreadcrumbs({ items: items }) }}
   </div>

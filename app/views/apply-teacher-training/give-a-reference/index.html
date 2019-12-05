@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% set title = 'Give a reference' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ designHistory.breadcrumbs(breadcrumbItems()) }}{% endblock %}
+
+{% block content %}
+{% set content %}
+One of the first aspects of [the MVP service](/apply-teacher-training/apply-launch-26-nov-2019) we wanted to improve was how we accept references.
+
+Initially this was achieved using a Google form. However, this approach required a lot of manual intervention, preventing automation of reminders and status updates. Also, Google Forms are not very accessible.
+
+While maintaing the reduced question set, we devised a flow that would enable us to collect a reference and have its content be submitted directly to the service. With the limitation of Google Forms removed, we could also give referees the opportunity to correct any errors, and ask them to give a reason for declining to provide a reference.
+{% endset %}
+  <h1 class="govuk-heading-xl">{{ title }}</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ markdown(content) | safe }}
+      {% set contents = [
+        { text: 'Start page', id: 'start' },
+        { text: 'Decline to give a reference', id: 'decline' },
+        { text: 'Confirm details', id: 'confirm-details' },
+        { text: 'Comments', id: 'comments' },
+        { text: 'Confirmation', id: 'confirmation' },
+        { text: 'Finish (with user research opt-in)', id: 'finish-user-research-opt-in' },
+        { text: 'Finish', id: 'finish' }
+      ] %}
+      {{ designHistory.screenshotContents(contents) }}
+
+      {{ designHistory.screenshot('Start page', 'start', '/public/images/apply-teacher-training/give-a-reference/thumbnails/start.png', '/public/images/apply-teacher-training/give-a-reference/start.png', '<p>We ask referees if they are happy to give a reference. If they select no, a free text area allows them to provide a reason.</p>') }}
+
+      {{ designHistory.screenshot('Decline to give a reference', 'decline', '/public/images/apply-teacher-training/give-a-reference/thumbnails/decline.png', '/public/images/apply-teacher-training/give-a-reference/decline.png', '<p>Should the referee have selected this option in error, we provide contact details to rectify. If this happens a lot, we can think about adding a self-serve way to recover.</p>') }}
+
+      {{ designHistory.screenshot('Confirm details', 'confirm-details', '/public/images/apply-teacher-training/give-a-reference/thumbnails/confirm-details.png', '/public/images/apply-teacher-training/give-a-reference/confirm-details.png', '<p>Give the referee the opportunity to correct any details. If they select no, a free text area is shown where they can tell us what needs correcting.</p>') }}
+
+      {{ designHistory.screenshot('Comments', 'comments', '/public/images/apply-teacher-training/give-a-reference/thumbnails/comments.png', '/public/images/apply-teacher-training/give-a-reference/comments.png', '<p>The actual reference content. We provide guidance here about the sort of content that would be helpful here.</p>') }}
+
+      {{ designHistory.screenshot('Confirmation', 'confirmation', '/public/images/apply-teacher-training/give-a-reference/thumbnails/confirmation.png', '/public/images/apply-teacher-training/give-a-reference/confirmation.png', '<p>Confirm that their reference has been submitted. At this point, we then ask if they would like to opt-in to user research.</p>') }}
+
+      {{ designHistory.screenshot('Finish (with user research opt-in)', 'finish-user-research-opt-in', '/public/images/apply-teacher-training/give-a-reference/thumbnails/finish-user-research-opt-in.png', '/public/images/apply-teacher-training/give-a-reference/finish-user-research-opt-in.png', '<p>If they opt in, we include a message to say researchers will be in touch (this may need revising based on how we choose to engage with referees)</p>') }}
+
+      {{ designHistory.screenshot('Finish', 'finish', '/public/images/apply-teacher-training/give-a-reference/thumbnails/finish.png', '/public/images/apply-teacher-training/give-a-reference/finish.png', '<p>If they decide not to opt-in, we don’t include that message.</p>') }}
+    </div>
+  </div>
+{% endblock %}

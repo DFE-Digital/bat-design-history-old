@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% set title = 'Find as of December 2019' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ designHistory.breadcrumbs(breadcrumbItems()) }}{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">{{ title }}</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>A complete snapshot of Find postgraduate teacher training as it looked in December 2019.</p>
+      <p>Changes since <a href="/find-teacher-training/live-launch">Find’s launch in 2018</a> include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>A <a href="https://www.gov.uk/find-postgraduate-teacher-training-courses">proper GOV.UK start page</a></li>
+        <li>A <a href="/find-teacher-training/send-survey">way of finding courses with a SEND specialism</a></li>
+        <li>A <a href="/find-teacher-training/map-4">small map on search results</a> showing where a user searched</li>
+        <li>A map on course pages showing training locations</li>
+        <li>Focus on training location names and address rather than codes (they aren’t needed for UCAS Apply)</li>
+        <li><a href="/find-teacher-training/tweaked-course-titles">Better course titles</a> in search results and on course pages</li>
+        <li>Updated financial incentives</li>
+        <li>A filter for finding courses without vacancies (useful towards the end of a cycle)</li>
+        <li>Removal of the skills test from course pages and the start page</li>
+        <li>No more <a href="/find-teacher-training/live-launch#course-not-enriched">minimal course details pages</a>, all courses have full information</li>
+      </ul>
+
+      <p>Iteration on Find has been minimal in the last year because the team has needed to focus on an API for UCAS, building Publish, and adding the features needed as the authoritative source of courses (for example ‘Add new course’).</p>
+    </div>
+  </div>
+
+  {% set contents = [
+    { text: 'GOV.UK Start page', id: '01-govuk-start-page' },
+    { text: 'Search by location', id: '02-search-by-location' },
+    { text: 'Search by provider', id: '03-search-by-provider' },
+    { text: 'Find courses by subject', id: '04-find-courses-by-subject' },
+    { text: 'Search results by location', id: '05-search-results-by-location' },
+    { text: 'Search results by provider', id: '06-search-results-by-provider' },
+    { text: 'Course page', id: '07-course-page' },
+    { text: 'Map on course page', id: '08-map-on-course-page' },
+    { text: 'Filter by funding', id: '09-filter-by-funding' },
+    { text: 'Filter by qualification', id: '10-filter-by-qualification' },
+    { text: 'Filter by study type', id: '11-filter-by-study-type' },
+    { text: 'Filter by courses with vacancies', id: '12-filter-by-courses-with-vacancies' },
+    { text: 'Terms and conditions', id: '19-terms-and-conditions' },
+    { text: 'Cookies', id: '20-cookies' },
+    { text: 'Accessibility statement', id: '21-accessibility-statement' },
+    { text: 'Privacy policy', id: '22-privacy-policy' }
+  ] %}
+  {{ designHistory.screenshotContents(contents) }}
+
+  {{ designHistory.screenshot('GOV.UK Start page', '01-govuk-start-page', '/public/images/find-teacher-training/find-december-2019/thumbnails/01-govuk-start-page.png', '/public/images/find-teacher-training/find-december-2019/01-govuk-start-page.png', '') }}
+
+  {{ designHistory.screenshot('Search by location', '02-search-by-location', '/public/images/find-teacher-training/find-december-2019/thumbnails/02-search-by-location.png', '/public/images/find-teacher-training/find-december-2019/02-search-by-location.png', '') }}
+
+  {{ designHistory.screenshot('Search by provider', '03-search-by-provider', '/public/images/find-teacher-training/find-december-2019/thumbnails/03-search-by-provider.png', '/public/images/find-teacher-training/find-december-2019/03-search-by-provider.png', '') }}
+
+  {{ designHistory.screenshot('Find courses by subject', '04-find-courses-by-subject', '/public/images/find-teacher-training/find-december-2019/thumbnails/04-find-courses-by-subject.png', '/public/images/find-teacher-training/find-december-2019/04-find-courses-by-subject.png', '') }}
+
+  {{ designHistory.screenshot('Search results by location', '05-search-results-by-location', '/public/images/find-teacher-training/find-december-2019/thumbnails/05-search-results-by-location.png', '/public/images/find-teacher-training/find-december-2019/05-search-results-by-location.png', '') }}
+
+  {{ designHistory.screenshot('Search results by provider', '06-search-results-by-provider', '/public/images/find-teacher-training/find-december-2019/thumbnails/06-search-results-by-provider.png', '/public/images/find-teacher-training/find-december-2019/06-search-results-by-provider.png', '') }}
+
+  {{ designHistory.screenshot('Course page', '07-course-page', '/public/images/find-teacher-training/find-december-2019/thumbnails/07-course-page.png', '/public/images/find-teacher-training/find-december-2019/07-course-page.png', '') }}
+
+  {{ designHistory.screenshot('Map on course page', '08-map-on-course-page', '/public/images/find-teacher-training/find-december-2019/thumbnails/08-map-on-course-page.png', '/public/images/find-teacher-training/find-december-2019/08-map-on-course-page.png', '') }}
+
+  {{ designHistory.screenshot('Filter by funding', '09-filter-by-funding', '/public/images/find-teacher-training/find-december-2019/thumbnails/09-filter-by-funding.png', '/public/images/find-teacher-training/find-december-2019/09-filter-by-funding.png', '') }}
+
+  {{ designHistory.screenshot('Filter by qualification', '10-filter-by-qualification', '/public/images/find-teacher-training/find-december-2019/thumbnails/10-filter-by-qualification.png', '/public/images/find-teacher-training/find-december-2019/10-filter-by-qualification.png', '') }}
+
+  {{ designHistory.screenshot('Filter by study type', '11-filter-by-study-type', '/public/images/find-teacher-training/find-december-2019/thumbnails/11-filter-by-study-type.png', '/public/images/find-teacher-training/find-december-2019/11-filter-by-study-type.png', '') }}
+
+  {{ designHistory.screenshot('Filter by courses with vacancies', '12-filter-by-courses-with-vacancies', '/public/images/find-teacher-training/find-december-2019/thumbnails/12-filter-by-courses-with-vacancies.png', '/public/images/find-teacher-training/find-december-2019/12-filter-by-courses-with-vacancies.png', '') }}
+
+  {{ designHistory.screenshot('Terms and conditions', '19-terms-and-conditions', '/public/images/find-teacher-training/find-december-2019/thumbnails/19-terms-and-conditions.png', '/public/images/find-teacher-training/find-december-2019/19-terms-and-conditions.png', '') }}
+
+  {{ designHistory.screenshot('Cookies', '20-cookies', '/public/images/find-teacher-training/find-december-2019/thumbnails/20-cookies.png', '/public/images/find-teacher-training/find-december-2019/20-cookies.png', '') }}
+
+  {{ designHistory.screenshot('Accessibility statement', '21-accessibility-statement', '/public/images/find-teacher-training/find-december-2019/thumbnails/21-accessibility-statement.png', '/public/images/find-teacher-training/find-december-2019/21-accessibility-statement.png', '') }}
+
+  {{ designHistory.screenshot('Privacy policy', '22-privacy-policy', '/public/images/find-teacher-training/find-december-2019/thumbnails/22-privacy-policy.png', '/public/images/find-teacher-training/find-december-2019/22-privacy-policy.png', '') }}
+
+{% endblock %}

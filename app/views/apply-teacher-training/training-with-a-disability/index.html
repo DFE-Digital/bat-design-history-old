@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% set title = 'Giving details about disability' %}
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block breadcrumbs %}{{ designHistory.breadcrumbs(breadcrumbItems()) }}{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">{{ title }}</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>Disclosing a disability is a way for candidates to present their disability and needs to a provider, with the potential benefit of making training easier and more accessible.</p>
+
+      <p>But disclosure could also put the candidate at risk of unconscious bias and discrimination from providers.</p>
+
+      <p>The later a candidate finds out their access needs can’t be adequately met, or that a provider has the wrong attitude towards meeting them, the more pain that candidate will go through.</p>
+
+      <p>Encouraging early conversation (perhaps anonymously) between candidates with disabilities and the right people at their potential training providers will help.</p>
+
+      <h2 class="govuk-heading-l">Reasonable adjustments</h2>
+
+      <p>People with disabilities sometimes need reasonable adjustments so they can complete their training. An example of a reasonable adjustment is fitting an <a href="https://en.wikipedia.org/wiki/Audio_induction_loop">audio induction loop</a> to assist people with reduced hearing ranges who use hearing aids. If someone is completely deaf and needs a full time British Sign Language interpreter, this is very expensive and could be considered unreasonable.</p>
+
+      <p><a href="https://www.gov.uk/reasonable-adjustments-for-disabled-workers">More about reasonable adjustments</a></p>
+
+      <h2 class="govuk-heading-l">Descoped from MVP</h2>
+      <p>We descoped this feature from MVP for the following reasons:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>We haven’t researched this question properly, from a user, policy and legal perspective</li>
+        <li>Candidates can use the interview preferences field to declare interview needs, and could use the catch-all “Anything else” section at the end to talk about their disability in a wider context (though they won’t know this beforehand).</li>
+        <li>We will plan and carry out proper research with the right cohort of participants, both those who have previously applied, and potentially by finding those that have been unsuccessful/rejected</li>
+      </ul>
+
+      <p>We need to speak to current trainees with disabilities and find out what worked for them and what didn’t during their application process.</p>
+
+      <h2 class="govuk-heading-l">Advice from the Equality and Human Rights Commission on encouraging disability disclosure</h2>
+
+      <p>From a lawyer at EHRC we found out that:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>under section 60 of the Equality Act you shouldn’t normally encourage disability disclosure before offering a job (relevant to salaried teacher training routes)</li>
+        <li>however, there are exceptions under the Education Act 2002 and the The Education (Health Standards) (England) Regulations 2003</li>
+        <li>when read together, these bits of legislation say that schools can ask relevant questions about disability/health</li>
+        <li>the same goes if a candidate is going down a non salaried route – providers can ask relevant questions so they can take reasonable steps to accommodate a candidate/ascertain the candidate’s ability to carry out the post</li>
+        <li>encouraging disability disclosure in this context is not unlawful but it’s a good idea to be explicit about why we’re encouraging it and to make providers and candidates aware of their duties/rights – for example, are providers asking relevant questions? Do candidates know what kind of questions are appropriate?</li>
+      </ul>
+
+      <p>“Relevant” is subjective, but see <a href="http://www.legislation.gov.uk/uksi/2003/3139/regulation/5/made">sections 5 and 6 of the The Education (Health Standards) (England) Regulations 2003</a>.</p>
+      <p>Essentially, we can ask questions if it’s regarding an applicant’s ability to do the activities outlined in this legislation.</p>
+    </div>
+  </div>
+
+  {% set contents = [
+    { text: 'Training with a disability', id: '01-training-with-a-disability' },
+    { text: 'Review when disability given', id: '02-review-when-disability-given' },
+    { text: 'Review without disability', id: '03-review-without-disability' }
+  ] %}
+  {{ designHistory.screenshotContents(contents) }}
+
+  {{ designHistory.screenshot('Training with a disability', '01-training-with-a-disability', '/public/images/apply-teacher-training/training-with-a-disability/thumbnails/01-training-with-a-disability.png', '/public/images/apply-teacher-training/training-with-a-disability/01-training-with-a-disability.png', '') }}
+
+  {{ designHistory.screenshot('Review when disability given', '02-review-when-disability-given', '/public/images/apply-teacher-training/training-with-a-disability/thumbnails/02-review-when-disability-given.png', '/public/images/apply-teacher-training/training-with-a-disability/02-review-when-disability-given.png', '') }}
+
+  {{ designHistory.screenshot('Review without disability', '03-review-without-disability', '/public/images/apply-teacher-training/training-with-a-disability/thumbnails/03-review-without-disability.png', '/public/images/apply-teacher-training/training-with-a-disability/03-review-without-disability.png', '') }}
+
+{% endblock %}

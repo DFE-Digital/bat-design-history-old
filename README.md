@@ -1,8 +1,16 @@
-# Becoming a teacher design history
+# This version of the design history has been retired
 
-https://bat-design-history.herokuapp.com/
+This is the repository for the original design history.
 
-[Design history](https://github.com/fofr/govuk-design-history) is an app built using the [GOV.UK prototyping kit](https://github.com/alphagov/govuk-prototype-kit).
+The design history has since been replaced with a version based on eleventy:
+
+* https://bat-design-history.herokuapp.com/
+* https://github.com/DFE-Digital/bat-design-history
+
+The original version is still available here:
+https://bat-design-history-old.herokuapp.com/
+
+[Design history](https://github.com/fofr/govuk-design-history) was an app built using the [GOV.UK prototyping kit](https://github.com/alphagov/govuk-prototype-kit).
 
 ## Document your designs
 
